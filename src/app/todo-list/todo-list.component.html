@@ -1,0 +1,21 @@
+<div class="todo-list">
+  <a class="button nav-btn" routerLink="/user-update">
+    USER UPDATE
+  </a>
+
+  <div>
+    <div class="input-wrapper">
+      <label>Add new task:</label>
+      <input class="input" #taskDescription />
+    </div>
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="button" (click)="add(taskDescription.value); taskDescription.value=''">
+      Add
+    </button>
+  </div>
+
+  <ul *ngFor="let task of tasks">
+    <li>{{task.description}}</li>
+  </ul>
+</div>

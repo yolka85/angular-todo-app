@@ -1,0 +1,15 @@
+<div class='login'>
+  <div class="input-wrapper">
+    <label for="login">Login:</label>
+    <input id="login" #login class="input"/>
+  </div>
+
+  <div class="input-wrapper">
+    <label for="password">Password:</label>
+    <input id="password" #password class="input"/>
+  </div>
+
+  <button class="button" (click)="add(login.value, password.value)" routerLink="/todo">
+    OK
+  </button>
+</div>
